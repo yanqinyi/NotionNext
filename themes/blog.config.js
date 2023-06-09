@@ -122,7 +122,7 @@ const BLOG = {
   ],
 
   // 樱花飘落特效
-  SAKURA: process.env.NEXT_PUBLIC_SAKURA || false, // 开关
+  SAKURA: process.env.NEXT_PUBLIC_SAKURA || true, // 开关
 
   // 漂浮线段特效
   NEST: process.env.NEXT_PUBLIC_NEST || false, // 开关
@@ -143,6 +143,7 @@ const BLOG = {
   WIDGET_PET_SWITCH_THEME: true, // 点击宠物挂件切换博客主题
 
   // 音乐播放插件
+    /*
   MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || true, // 是否使用音乐播放插件
   MUSIC_PLAYER_VISIBLE: process.env.NEXT_PUBLIC_MUSIC_PLAYER_VISIBLE || true, // 是否在左下角显示播放和切换，如果使用播放器，打开自动播放再隐藏，就会以类似背景音乐的方式播放，无法取消和暂停
   MUSIC_PLAYER_AUTO_PLAY:
@@ -155,9 +156,9 @@ const BLOG = {
   MUSIC_PLAYER_AUDIO_LIST: [
     // 示例音乐列表。除了以下配置外，还可配置歌词，具体配置项看此文档 https://aplayer.js.org/#/zh-Hans/
     {
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28768123&auto=1&height=66"></iframe>
+        
       
-     /* name: '风を共に舞う気持ち',
+     name: '风を共に舞う気持ち',
       artist: 'Falcom Sound Team jdk',
       url: 'https://music.163.com/song/media/outer/url?id=731419.mp3',
       cover:
@@ -173,6 +174,7 @@ const BLOG = {
     */
       
   ],
+    /*
   MUSIC_PLAYER_METING: process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING || false, // 是否要开启 MetingJS，从平台获取歌单。会覆盖自定义的 MUSIC_PLAYER_AUDIO_LIST，更多配置信息：https://github.com/metowolf/MetingJS
   MUSIC_PLAYER_METING_SERVER:
       process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_SERVER || 'netease', // 音乐平台，[netease, tencent, kugou, xiami, baidu]
@@ -180,18 +182,21 @@ const BLOG = {
       process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_ID || '60198', // 对应歌单的 id
   MUSIC_PLAYER_METING_LRC_TYPE:
       process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_LRC_TYPE || '1', // 可选值： 3 | 1 | 0（0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）
+        
+        
+  */
 
   // ----> 评论互动 可同时开启多个支持 WALINE VALINE GISCUS CUSDIS UTTERRANCES GITALK
 
   // twikoo
-  COMMENT_TWIKOO_ENV_ID: process.env.NEXT_PUBLIC_COMMENT_ENV_ID || '', // TWIKOO地址 腾讯云环境填 envId；Vercel 环境域名地址（https://xxx.vercel.app)
+  //COMMENT_TWIKOO_ENV_ID: process.env.NEXT_PUBLIC_COMMENT_ENV_ID || '', // TWIKOO地址 腾讯云环境填 envId；Vercel 环境域名地址（https://xxx.vercel.app)
 
   // utterance
   COMMENT_UTTERRANCES_REPO:
-      process.env.NEXT_PUBLIC_COMMENT_UTTERRANCES_REPO 'yanqinyi/NotionNext' // 你的代码仓库名， 例如我是 'tangly1024/NotionNext'； 更多文档参考 https://utteranc.es/
+      process.env.NEXT_PUBLIC_COMMENT_UTTERRANCES_REPO 'yanqinyi/NotionNext' // 你的代码仓库名， 更多文档参考 https://utteranc.es/
 
   // giscus @see https://giscus.app/
-  COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || '', // 你的Github仓库名 e.g 'tangly1024/NotionNext'
+  COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || 'yanqinyi/comment-use', // 你的Github仓库名 e.g 'tangly1024/NotionNext'
   COMMENT_GISCUS_REPO_ID: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO_ID || '', // 你的Github Repo ID e.g ( 設定完 giscus 即可看到 )
   COMMENT_GISCUS_CATEGORY_ID:
       process.env.NEXT_PUBLIC_COMMENT_GISCUS_CATEGORY_ID || '', // 你的Github Discussions 內的 Category ID ( 設定完 giscus 即可看到 )
